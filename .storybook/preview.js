@@ -8,7 +8,7 @@ const ThemeDecorator = (storyFn) => {
 
     const content = storyFn();
     return (
-        <ThemeProvider variants={{ theme: select("theme", { blue: "blue", red: "red"}, "blue") }}>
+        <ThemeProvider variants={{ mode: select("theme", { blue: "blue", red: "red"}, "blue") }}>
             <div style={{ padding: 12, display: "flex", alignItems: "center", justifyContent: "center" }}>
                 {content}
             </div>
