@@ -1,12 +1,14 @@
 import { FunctionComponent } from "react";
 import { ColorKey } from "../../theme/colors";
 
+export type HTMLButtonElementProps = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+
 export type ButtonProps = {
-    /** Custom color to be used for text, as a design token entered in camelCase or kebab-case. Example: "color-primary". */
+    /** Custom color to be used for text */
     color?: Exclude<ColorKey, "black" | "white" | "gray" | "secondary" | "warning">;
     ref?: React.Ref<HTMLButtonElement>;
     variant?: "default" | "filled" | "text"
-} & Omit<React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, "ref">;
+} & Omit<HTMLButtonElementProps, "ref">;
 
 export type StyledButtonProps = ButtonProps & {
     color: Exclude<ButtonProps["color"], undefined>;

@@ -3,7 +3,7 @@ import { theme } from "../../providers/ThemeProvider";
 import { createRGBAFactory } from "./colors.utils";
 
 const PrimaryColor = {
-    dark: theme<{ hex: string, rgba: any }>("theme", {
+    dark: theme("theme", {
         blue: {
             hex: "#004d80",
             rgba: createRGBAFactory(0, 77, 128)
