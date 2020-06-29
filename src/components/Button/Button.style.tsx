@@ -19,6 +19,7 @@ export const Button = styled.button<StyledButtonProps>`
             color: ${theme.colors[color].base};
             background: ${theme.colors.white.base};
             border: ${theme.sizes.button.border} solid ${theme.colors.gray.light};
+            transition: border-color ${theme.transitions.quickly};
             &:hover {
                 border-color: ${theme.colors[color].base};
             }
@@ -26,10 +27,11 @@ export const Button = styled.button<StyledButtonProps>`
 
         ${variant === "filled" && css`
             color: ${theme.colors.white.base};
-            background: ${theme.colors[color].base};
+            background-color: ${theme.colors[color].base};
+            transition: background-color ${theme.transitions.quickly};
             ${color === "primary" && css`
                 &:hover {
-                    background: ${theme.colors[color].dark};
+                    background-color: ${theme.colors[color].dark.hex};
                 }
             `}
         `}
@@ -38,6 +40,6 @@ export const Button = styled.button<StyledButtonProps>`
             color: ${theme.colors[color].base};
             background: ${theme.colors.white.base};
         `}
-
+        
     `}
 `;

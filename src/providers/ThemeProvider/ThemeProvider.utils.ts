@@ -21,7 +21,7 @@ export function token<T = string>(name: string, values: Record<string, T>): Them
  * Resolves all of the `ThemeToken` functions and creates the usable theme object
  * that will be passed into the styled-components provider.
  * @param theme The theme to resolve.
- * @param variants The theme variants.
+ * @param variants The theme variants such as `{ mode: "light" }` or `{ mode: "dark" }`
  */
 export function resolveTheme(theme: object, variants?: Record<string, any>): DefaultTheme {
     return deepMapObject<DefaultTheme>(theme, (value) => {

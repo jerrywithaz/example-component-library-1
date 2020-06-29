@@ -1,5 +1,5 @@
-import React from 'react';
-import { ButtonComponent } from './Button.types';
+import React, { FunctionComponent } from 'react';
+import { ButtonComponent, ButtonProps } from './Button.types';
 import * as Styled from './Button.style';
 
 /**
@@ -13,6 +13,18 @@ export const Button: ButtonComponent = ({
     return (
         <Styled.Button color={color} variant={variant} {...buttonProps}/>
     );
+}
+
+export const PrimaryButton: FunctionComponent<Omit<ButtonProps, "color">> = (props) => {
+    return <Button color="primary" {...props}/>;
+}
+
+export const DangerButton: FunctionComponent<Omit<ButtonProps, "color">> = (props) => {
+    return <Button color="danger" {...props}/>;
+}
+
+export const SuccessButton: FunctionComponent<Omit<ButtonProps, "color">> = (props) => {
+    return <Button color="success" {...props}/>;
 }
 
 export default Button;
