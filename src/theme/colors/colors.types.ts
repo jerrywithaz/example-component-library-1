@@ -9,7 +9,7 @@ export type ColorKey = "primary" | "secondary" | "white" | "danger" | "warning" 
 export type Colors = {
     primary: {
         /** Dark version of primary color that is accessible with white. Most commonly used to indicate hover and active states of an item with primary blue background. */
-        dark: ThemeSet;
+        dark: ThemeSet<{ hex: string, rgba: any }>;
         /** Primary digital color that is accessible with white. Used as primary button background color, selected state background color, and as link text color. */
         base: ThemeSet;
         /** Light color that is 20% tint of the primary red. Accessible when secondary color is used as the text color. */

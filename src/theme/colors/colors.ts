@@ -1,10 +1,17 @@
 import { Colors } from "./colors.types";
 import { theme } from "../../providers/ThemeProvider";
+import { createRGBAFactory } from "./colors.utils";
 
 const PrimaryColor = {
-    dark: theme("theme", {
-        blue: "#004d80",
-        red: "#940925"
+    dark: theme<{ hex: string, rgba: any }>("theme", {
+        blue: {
+            hex: "#004d80",
+            rgba: createRGBAFactory(0, 77, 128)
+        },
+        red: {
+            hex: "#940925",
+            rgba: createRGBAFactory(0, 77, 128)
+        }
     }),
     base: theme("theme", {
         blue: "#0077b3",
@@ -94,7 +101,6 @@ const colors: Colors = {
     success: SuccessColor,
     warning: WarningColor,
     gray: GrayColor
-    // black: BlackColor,
 };
 
 export default colors;

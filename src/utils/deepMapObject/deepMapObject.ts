@@ -1,9 +1,9 @@
-function deepMapKeys(
+function deepMapKeys<TResult extends Record<string, any> = {}>(
     obj: Record<string, any> | Array<any>, 
     func: (value: any, key: string) => any
-): any {
+): TResult {
     if (Array.isArray(obj)) {
-      return obj.map(val => deepMapKeys(val, func));  
+      return obj.map(val => deepMapKeys(val, func)) as any;  
     }
     else {
         if (typeof obj === 'object') {
@@ -17,7 +17,7 @@ function deepMapKeys(
 
                 return acc;
 
-            }, {} as Record<string, any>);
+            }, {} as Record<string, any>) as any;
         }
         else return obj;
     }

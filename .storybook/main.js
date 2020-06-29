@@ -19,6 +19,8 @@ module.exports = {
     },
     '@storybook/addon-actions',
     '@storybook/addon-links',
-    '@storybook/addon-knobs'
+    '@storybook/addon-knobs',
+    '@storybook/addon-a11y',
+    '@storybook/addon-jest'
   ],
 };

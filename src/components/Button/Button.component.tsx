@@ -7,7 +7,7 @@ import * as Styled from './Button.style';
  */
 export const Button: ButtonComponent = ({
     color = "primary",
-    variant = "filled",
+    variant = "default",
     ...buttonProps
 }) => {
     return (
