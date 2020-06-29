@@ -1,4 +1,4 @@
-import { ThemeToken } from 'providers/ThemeProvider';
+import { ThemeToken } from 'styled-theme-tokens';
 
 export type ColorKey = "primary" | "secondary" | "white" | "danger" | "warning" | "success" | "gray"; // | "black" ;
 

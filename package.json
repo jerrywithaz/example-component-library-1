@@ -21,6 +21,7 @@
     "storybook-addon-react-docgen": "^1.2.40",
     "styled-components": "^5.1.1",
     "styled-media-query": "^2.1.2",
+    "styled-theme-tokens": "^0.0.5",
     "styled-theming": "^2.2.0",
     "typescript": "~3.9.5"
   },

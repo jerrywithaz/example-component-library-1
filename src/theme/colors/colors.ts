@@ -1,5 +1,5 @@
 import { Colors } from "./colors.types";
-import { token } from "../../providers/ThemeProvider";
+import { token } from "styled-theme-tokens";
 import { createRGBAFactory } from "./colors.utils";
 
 const PrimaryColor = {
